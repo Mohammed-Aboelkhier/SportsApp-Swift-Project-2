@@ -13,6 +13,7 @@ struct league : Decodable
     var strLeague :  String
     var strBadge  : String
     var strYoutube : String
+    var idLeague : String
 }
 
 struct LeagueResults  : Decodable

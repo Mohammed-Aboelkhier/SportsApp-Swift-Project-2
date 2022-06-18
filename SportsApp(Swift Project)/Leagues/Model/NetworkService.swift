@@ -10,7 +10,9 @@ import Alamofire
 
 class NetworkService
 {
-    let Leagueurl = "https://www.thesportsdb.com/api/v1/json/2/search_all_leagues.php?c=England"
+   let Leagueurl = "https://www.thesportsdb.com/api/v1/json/2/search_all_leagues.php?c=England"
+    
+//    let Leagueurl = "https://www.thesportsdb.com/api/v1/json/2/search_all_leagues.php?s=Soccer"
     func getLeagueDetails(completion: @escaping (LeagueResults?,Error?) -> ()) {
         
             AF.request(Leagueurl).responseDecodable(of: LeagueResults.self) { response in

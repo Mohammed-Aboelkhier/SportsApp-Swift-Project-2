@@ -47,7 +47,14 @@ class LeaguesViewController: UIViewController,UITableViewDelegate,UITableViewDat
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+            let vc = storyboard!.instantiateViewController(withIdentifier: "LeagueDetailsVC") as! LeagueDetailsViewController
+        vc.leagueID = detailsViewModel.arrayOfFilteredLeagues[indexPath.row].idLeague
+            self.present(vc, animated: true)
+        }
     
+
     /*
     // MARK: - Navigation
 
